@@ -14,6 +14,8 @@ int main() {
     cout << "Enter 'w' if you know the width or 'h' if you know the height: ";
     cin >> knownDimension;
 
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
     cout << "Enter the known side length: ";
     cin >> knownSide;
 
@@ -34,6 +36,9 @@ int main() {
     else {
         cout << "Invalid input for dimension. Please enter 'w' for width or 'h' for height." << endl;
     }
+
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.get();
 
     return 0;
 }
